@@ -1,0 +1,109 @@
+<html>
+   
+   <head>
+      <title>Form Validation</title>
+      
+      <script type="text/javascript">
+    
+      function validate()
+      {
+      
+         if( document.myForm.fname.value == "" )
+         {
+            alert( "Please provide your first name!" );
+            document.myForm.fname.focus() ;
+            return false;
+         }
+         if( document.myForm.lname.value == "" )
+         {
+            alert( "Please provide your last name!" );
+            document.myForm.lname.focus() ;
+            return false;
+         }
+         
+		 
+         if( document.myForm.EMail.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         if( document.myForm.phone.value == "" )
+         {
+            alert( "Please provide your phone number!" );
+            document.myForm.phone.focus() ;
+            return false;
+         }
+        
+         if( document.myForm.password.value == "" )
+         {
+            alert( "Please provide your password!" );
+            document.myForm.password.focus() ;
+            return false;
+         }
+		 if( document.myForm.cpass.value == "" )
+         {
+            alert( "Please provide your confirm password!" );
+            document.myForm.cpass.focus() ;
+            return false;
+         }
+        if( document.myForm.cpass.value != document.myForm.password.value )
+         {
+            alert( "Password & confirm password doesn't match!" );
+            document.myForm.cpass.focus() ;
+            return false;
+         }
+		 
+		 
+		 
+		
+		
+         return( true );
+      }
+
+      </script>
+      
+   </head>
+   
+   <body>
+      <form action="#" name="myForm" onsubmit="return(validate());">
+         <table cellspacing="2" cellpadding="2" border="0">
+            
+            <tr>
+               <td align="right">First Name</td>
+               <td><input type="text" name="fname" /></td>
+            </tr>
+            <tr>
+               <td align="right">Last Name</td>
+               <td><input type="text" name="lname" /></td>
+            </tr>
+			
+			<tr>
+               <td align="right">Phone</td>
+               <td><input type="text" name="phone" /></td>
+            </tr>
+            <tr>
+               <td align="right">EMail ID</td>
+               <td><input type="text" name="EMail" /></td>
+            </tr>
+             <tr>
+               <td align="right">Password</td>
+               <td><input type="password" name="password" /></td>
+            </tr>
+			<tr>
+               <td align="right">Confirm Password</td>
+               <td><input type="password" name="cpass" /></td>
+            </tr>
+           
+            
+            
+            <tr>
+               <td align="right"></td>
+               <td><input type="submit" value="Submit" /></td>
+            </tr>
+            
+         </table>
+      </form>
+      
+   </body>
+</html>
